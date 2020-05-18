@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e67fcda0-a10e-4a56-ab90-2c69adda89ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +44,7 @@
       <updated>1589556149943</updated>
       <workItem from="1589556152056" duration="497000" />
       <workItem from="1589830063079" duration="1462000" />
+      <workItem from="1589832435488" duration="1022000" />
     </task>
     <servers />
   </component>
@@ -52,6 +52,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="393" y="27" key="CommitChangelistDialog2" timestamp="1589833559340">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="393" y="27" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1589833559340" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1589556160881">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -72,5 +76,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589831527909" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1589833265433">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1589833265433" />
   </component>
 </project>
