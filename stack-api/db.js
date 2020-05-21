@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+//create database connection
 mongoose.connect('mongodb://localhost:27017/mongoDB',{useNewUrlParser:true,useUnifiedTopology:true},
 err => {
     if(!err){

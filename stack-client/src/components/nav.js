@@ -3,6 +3,7 @@ import '../App.css';
 import { Navbar , Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+/*******for navigation bar********/
 class nav extends React.Component {
   
   Logout = () => {

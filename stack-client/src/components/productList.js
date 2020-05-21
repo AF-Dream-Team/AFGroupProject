@@ -38,6 +38,7 @@ class ProductList extends React.Component {
                                     {
                                         products.map((product) =>
 
+                                            //table for display product details
                                             <tr>
                                                 <td class="tableTh" width="25%"><img width="200px" alt="" src={ "http://localhost:4000/"+product.image } class="img-thumbnail" /></td>
                                                 <td class="tableTh" width="60%"><h3>{ product.name  }</h3><br/><h5>category :{ product.name  } / Price: Rs. { product.price }</h5></td>

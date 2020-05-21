@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+//model for new product
 var NewProduct = mongoose.model('product',{
     name : {type:String},
     category : {type:String},

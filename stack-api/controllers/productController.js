@@ -5,6 +5,9 @@ var ObjectID= require('mongoose').Types.ObjectId
 
 var { NewProduct } = require('../models/newProducts')
 
+/*******APIs for manage products***************/
+
+//API for get product details
 router.get('/',(req,res)=>{
     NewProduct.find((err,docs)=>{
         if(!err){
@@ -15,6 +18,7 @@ router.get('/',(req,res)=>{
     })
 })
 
+//API for create new product
 router.post('/',(req,res)=>{
     var newRecord= new NewProduct({
         name : req.body.name,
@@ -29,11 +33,12 @@ router.post('/',(req,res)=>{
         if(!err){
             res.send(docs)
         }else{
-            console.log('Error while register : '+JSON.stringify(err,undefined,2))
+            console.log('Error while adding product : '+JSON.stringify(err,undefined,2))
         }
     })
 })
 
+//API for update product details by relevant id
 router.put('/:id',(req,res)=>{
     if(!ObjectID.isValid(req.params.id)){
         return res.status(400).send('No record with given id : '+req.params.id)
@@ -57,6 +62,7 @@ router.put('/:id',(req,res)=>{
     })
 })
 
+//API for delete product
 router.delete('/:id',(req,res)=>{
     if(!ObjectID.isValid(req.params.id)){
         return res.status(400).send('No record with given id : '+req.params.id)

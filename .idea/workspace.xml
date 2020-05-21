@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eec9f32d-95e9-484a-b263-edb65059efa0" name="Default Changelist" comment="" />
+    <list default="true" id="eec9f32d-95e9-484a-b263-edb65059efa0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/stack-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/models/newProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/newProducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/productList.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/productList.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589999857666</updated>
       <workItem from="1589999858863" duration="106000" />
+      <workItem from="1590059728588" duration="304000" />
     </task>
     <servers />
   </component>

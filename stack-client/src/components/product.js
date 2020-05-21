@@ -126,6 +126,7 @@ class Product extends React.Component {
         }
     }
 
+    /*****validate an input fields**********/
     validate = () => {
         let nameError = "";
         let priceError = "";
