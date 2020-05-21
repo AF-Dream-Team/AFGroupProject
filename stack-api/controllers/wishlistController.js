@@ -3,10 +3,10 @@ var router = express.Router()
 var ObjectID= require('mongoose').Types.ObjectId
 
 
-var { NewWishlist } = require('../models/newWishlist')
+var { wishList } = require('../models/wishlist')
 
 router.get('/',(req,res)=>{
-    NewWishlist.find((err,docs)=>{
+    wishList.find((err,docs)=>{
         if(!err){
             res.send(docs)
         }else{
@@ -16,16 +16,12 @@ router.get('/',(req,res)=>{
 })
 
 router.post('/',(req,res)=>{
-    var newItem= new NewWishlist({
+    var newRecord= new wishList({
         name : req.body.name,
-        category : req.body.category,
-        decription : req.body.decription,
-        quantity : req.body.quantity,
-        price : req.body.price,
-        discount : req.body.discount
+        email : req.body.email
     })
 
-    newItem.save((err,docs)=>{
+    newRecord.save((err,docs)=>{
         if(!err){
             res.send(docs)
         }else{
@@ -39,16 +35,12 @@ router.put('/:id',(req,res)=>{
         return res.status(400).send('No record with given id : '+req.params.id)
     }
 
-    var updateItems={
+    var updateRecords={
         name : req.body.name,
-        category : req.body.category,
-        decription : req.body.decription,
-        quantity : req.body.quantity,
-        price : req.body.price,
-        discount : req.body.discount
+        email : req.body.email
     }
 
-    newItem.findByIdAndUpdate(req.params.id, { $set: updateItems},{new:true}, (err,docs)=>{
+    wishList.findByIdAndUpdate(req.params.id, { $set: updateRecords},{new:true}, (err,docs)=>{
         if(!err){
             res.send(docs)
         }else{
@@ -62,7 +54,7 @@ router.delete('/:id',(req,res)=>{
         return res.status(400).send('No record with given id : '+req.params.id)
     }
 
-    newItem.findByIdAndRemove(req.params.id,(err,docs)=>{
+    wishList.findByIdAndRemove(req.params.id,(err,docs)=>{
         if(!err){
             res.send(docs)
         }else{

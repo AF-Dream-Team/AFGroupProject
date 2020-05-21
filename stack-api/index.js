@@ -5,6 +5,8 @@ const cors = require('cors')
 
 var postMessageRoutes = require('./controllers/postMessageController')
 var productRoutes = require('./controllers/productController')
+var messageRoutes = require('./controllers/messageController')
+var wishlistRoutes = require('./controllers/wishlistController')
 
 var app = express()
 app.use(bodyParser.json())
@@ -13,3 +15,6 @@ app.listen(4000,()=>console.log('Server started at : 4000'))
 
 app.use('/postMessages',postMessageRoutes)
 app.use('/product',productRoutes)
+app.use('/message',messageRoutes)
+app.use('/wishlist',wishlistRoutes)
+app.use(express.static('public'))
