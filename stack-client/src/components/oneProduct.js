@@ -253,6 +253,8 @@ class oneProduct extends React.Component {
         return true;
     }
 
+//Add to cart form 
+
     render (){
          const { products , messages , wishlist } = this.state;
         return (
