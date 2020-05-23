@@ -36,6 +36,11 @@ class wishList extends React.Component {
         });
     }
 
+    onView(id){
+        localStorage.setItem("wishListId",id);
+        window.location.href = '/list';
+    }
+
     onDelete(id){
         if (window.confirm("Are you sure to delete this record?")) {
             api.wishlist().delete(id)
@@ -141,6 +146,7 @@ class wishList extends React.Component {
                                         <thead>
                                             <tr>
                                                 <th class="tableTh">Wishlist</th>
+                                                <th class="tableTh">View</th>
                                                 <th class="tableTh">Edit</th>
                                                 <th class="tableTh">Remove</th>
                                             </tr>
@@ -152,6 +158,7 @@ class wishList extends React.Component {
 
                                             <tr>
                                                 <td class="tableTh">{ wish.name }</td>
+                                                <td class="tableTh"><button type='button' onClick={() => this.onView(wish._id)} class='btn btn-primary'>View</button></td>
                                                 <td class="tableTh"><button type='button' onClick={() => this.onChange(wish._id,wish.name)} class='btn btn-success'>Edit</button></td>
                                                 <td class="tableTh"><button type='button' onClick={() => this.onDelete(wish._id)} class='btn btn-danger'>Delete</button></td>
                                             </tr>
