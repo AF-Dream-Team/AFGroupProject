@@ -5,6 +5,8 @@ var ObjectID= require('mongoose').Types.ObjectId
 
 var { message } = require('../models/message')
 
+/*******APIs for manage comments***************/
+
 // to retrieve all records
 router.get('/',(req,res)=>{
     message.find((err,docs)=>{

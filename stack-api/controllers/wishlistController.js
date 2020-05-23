@@ -5,7 +5,9 @@ var ObjectID= require('mongoose').Types.ObjectId
 
 var { wishList } = require('../models/wishlist')
 
-// to retrieve all the product records
+/*******APIs for manage wishlist***************/
+
+//API for retrieve all the product records
 router.get('/',(req,res)=>{
     wishList.find((err,docs)=>{
         if(!err){
@@ -16,7 +18,7 @@ router.get('/',(req,res)=>{
     })
 })
 
-// to add a new product to wishlist
+//API for add a new product to wishlist
 router.post('/',(req,res)=>{
     var newRecord= new wishList({
         name : req.body.name,
@@ -32,7 +34,7 @@ router.post('/',(req,res)=>{
     })
 })
 
-// to update a record with a given id
+//API for update a record with a given id
 router.put('/:id',(req,res)=>{
     if(!ObjectID.isValid(req.params.id)){
         return res.status(400).send('No record with given id : '+req.params.id)
@@ -52,7 +54,7 @@ router.put('/:id',(req,res)=>{
     })
 })
 
-// to delete a record with a given id
+//API for delete a record with a given id
 router.delete('/:id',(req,res)=>{
     if(!ObjectID.isValid(req.params.id)){
         return res.status(400).send('No record with given id : '+req.params.id)
