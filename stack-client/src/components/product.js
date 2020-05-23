@@ -77,6 +77,21 @@ class Product extends React.Component {
             });
         }
     }
+	
+	//for upload a product image
+	onChangeHandler=event=>{
+        this.setState({
+            selectedFile: event.target.files[0],
+            loaded: 0,
+        }, () => {
+            const data = new FormData() 
+            data.append('file', this.state.selectedFile)
+            axios.post("http://localhost:4000/product/upload", data, { 
+            }).then(res => { 
+                this.setState({image:res.data.filename})
+            })
+        })
+    }
 
     handleSubmit = e => {
         e.preventDefault();
