@@ -4,6 +4,7 @@ import api from "../actions/api.js";
 import ButterToast, { Cinnamon } from "butter-toast";
 import { AssignmentTurnedIn , ExtensionSharp } from "@material-ui/icons";
 
+//define variables.
 const initialState = {
     id: "",
     name: "",
@@ -61,7 +62,8 @@ class Product extends React.Component {
         this.setState(initialState);
         this.componentDidMount();
     }
-
+	
+	//for delete product details
     onDelete(id){
         if (window.confirm("Are you sure to delete this record?")) {
             api.category().delete(id)
@@ -93,6 +95,7 @@ class Product extends React.Component {
         })
     }
 
+	//handle form submit button
     handleSubmit = e => {
         e.preventDefault();
         const isValid = this.validate();
@@ -196,6 +199,7 @@ class Product extends React.Component {
                             <div class="card">
                                 <div class="card-header">Category</div>
                                 <div class="card-body">
+								//form for add new product details
                                     <form autoComplete="off" onSubmit={this.handleSubmit}>
                                         <div class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-right">Product Name</label>
@@ -235,7 +239,7 @@ class Product extends React.Component {
                                                 <div style={{color : "red"}}>{this.state.priceError}</div>
                                             </div>
                                         </div>
-
+                                        
                                         <div class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-right">Discount</label>
                                             <div class="col-md-6">
@@ -250,6 +254,8 @@ class Product extends React.Component {
                                         </div>
                                     </form>
                                     <br></br>
+									
+									//table for display added product details
                                     <div class="x_scroll">
                                         <table class="table">
                                             <thead>

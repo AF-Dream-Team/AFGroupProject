@@ -32,6 +32,7 @@ class Category extends React.Component {
         });
     }
 
+	//for delete categories
     onDelete(id){
         if (window.confirm("Are you sure to delete this record?")) {
             api.category().delete(id)
@@ -48,6 +49,7 @@ class Category extends React.Component {
         }
     }
 
+	//for handle form submit button when add a category
     handleSubmit = e => {
         e.preventDefault();
         const isValid = this.validate();
@@ -81,6 +83,7 @@ class Category extends React.Component {
         }
     }
 
+	//for validate input fields in form
     validate = () => {
         let nameError = "";
 
@@ -107,6 +110,7 @@ class Category extends React.Component {
                             <div class="card">
                                 <div class="card-header">Category</div>
                                 <div class="card-body">
+									//form for add a category
                                     <form autoComplete="off" onSubmit={this.handleSubmit}>
                                         <div class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-right">Category Name</label>
@@ -123,6 +127,8 @@ class Category extends React.Component {
                                         </div>
                                     </form>
                                     <br></br>
+									
+									//table for display categories.
                                     <table class="table">
                                         <thead>
                                             <tr>

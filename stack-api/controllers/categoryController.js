@@ -2,9 +2,10 @@ const express = require('express')
 var router = express.Router()
 var ObjectID= require('mongoose').Types.ObjectId
 
-
+/************APIs for manage categories*********/
 var { ProductCategory } = require('../models/productCategory')
 
+//API for get all categories
 router.get('/',(req,res)=>{
     ProductCategory.find((err,docs)=>{
         if(!err){
@@ -15,6 +16,7 @@ router.get('/',(req,res)=>{
     })
 })
 
+//API for create a category
 router.post('/',(req,res)=>{
     var newRecord= new ProductCategory({
         name : req.body.name
@@ -29,6 +31,7 @@ router.post('/',(req,res)=>{
     })
 })
 
+//API for update a category
 router.put('/:id',(req,res)=>{
     if(!ObjectID.isValid(req.params.id)){
         return res.status(400).send('No record with given id : '+req.params.id)
@@ -47,6 +50,7 @@ router.put('/:id',(req,res)=>{
     })
 })
 
+//API for delete a category
 router.delete('/:id',(req,res)=>{
     if(!ObjectID.isValid(req.params.id)){
         return res.status(400).send('No record with given id : '+req.params.id)
