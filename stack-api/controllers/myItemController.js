@@ -4,6 +4,7 @@ var ObjectID= require('mongoose').Types.ObjectId
 
 
 var { myItem } = require('../models/myItem')
+/*******APIs for manage products of the shopping cart***************/
 
 router.get('/',(req,res)=>{
     myItem.find((err,docs)=>{
