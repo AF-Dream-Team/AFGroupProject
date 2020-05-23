@@ -4,6 +4,7 @@ import api from "../actions/api.js";
 import ButterToast, { Cinnamon } from "butter-toast";
 import { AssignmentTurnedIn , ExtensionSharp } from "@material-ui/icons";
 
+// define variables
 const initialState = {
     products: [],
     messages: [],
@@ -57,6 +58,7 @@ class oneProduct extends React.Component {
         .then(json => {const pro = json.filter(pro => pro._id===localStorage.getItem('itemId'))
             this.setState({products: pro})
         })
+		
         const url = "http://localhost:4000/message";
         fetch(url).then(response => response.json())
         .then(json => {const msg = json.filter(msg => msg.product===localStorage.getItem('itemId'))
@@ -100,7 +102,7 @@ class oneProduct extends React.Component {
         }
     }
 	
-	// updating a comment given for a product
+	
 	    editButton(id,msg,email){
         if(localStorage.getItem('userEmail')){
             if(email===localStorage.getItem('userEmail')){
@@ -188,6 +190,7 @@ class oneProduct extends React.Component {
         }
     }
 
+	// updating a comment given for a product
     handleSubmit = e => {
         e.preventDefault();
         const isValid = this.validate();

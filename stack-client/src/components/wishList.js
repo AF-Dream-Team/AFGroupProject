@@ -4,6 +4,7 @@ import api from "../actions/api.js";
 import ButterToast, { Cinnamon } from "butter-toast";
 import { AssignmentTurnedIn } from "@material-ui/icons";
 
+//define the variables
 const initialState = {
     name: "",
     nameError: "",
@@ -41,6 +42,7 @@ class wishList extends React.Component {
         window.location.href = '/list';
     }
 
+	//to delete a wishlist item
     onDelete(id){
         if (window.confirm("Are you sure to delete this record?")) {
             api.wishlist().delete(id)
@@ -56,7 +58,7 @@ class wishList extends React.Component {
             });
         }
     }
-
+   //to add a product to wishlist or update product 
     handleSubmit = e => {
         e.preventDefault();
         const isValid = this.validate();
@@ -101,6 +103,7 @@ class wishList extends React.Component {
         this.setState({confirmButton:"EDIT",id:id,name:name});
     }
 
+	// validate input field
     validate = () => {
         let nameError = "";
 
@@ -131,6 +134,7 @@ class wishList extends React.Component {
                                         <div class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-right">Wishlist Name</label>
                                             <div class="col-md-6">
+										      /* to give the relevant wishlist name for the choosed product (shoose,frocks,waatches etc)*/
                                                 <input type="text" class="form-control" name="name" value={this.state.name} onChange={this.handleChange} />
                                                 <div style={{color : "red"}}>{this.state.nameError}</div>
                                             </div>
