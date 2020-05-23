@@ -39,7 +39,7 @@ router.post('/',(req,res)=>{
         }
     })
 })
-
+/*------------------setting the email of the person who is capable of providing this service-----------------*/
 router.post('/email',(req,res)=>{
 
     var transporter = nodemailer.createTransport({
