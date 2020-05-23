@@ -45,13 +45,13 @@ router.post('/email',(req,res)=>{
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'apptest1994.05@gmail.com',
-          pass: 'apps1234'
+          user: 'dsassignment2dreamteam2020@gmail.com',
+          pass: 'ds2020@#'
         }
       });
 
     var mailOption ={
-        from: 'apptest1994.05@gmail.com',
+        from: 'dsassignment2dreamteam2020@gmail.com',
         to: req.body.email,
         subject: "Online Store change the privilege",
         text: "change your privilege to store manager"
