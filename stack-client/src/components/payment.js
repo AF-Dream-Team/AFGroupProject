@@ -64,6 +64,8 @@ class Payment extends React.Component {
         })
     }
 
+/*****validate payment form  input fields**********/
+
     validate = () => {
         let nameError= "";
         let cardError= "";
@@ -106,6 +108,8 @@ class Payment extends React.Component {
 
         return true;
     }
+
+/*****Payment form**********/
 
     render (){
         return (
