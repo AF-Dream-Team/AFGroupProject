@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 
+/* Order form */
 class Order extends React.Component {
 
     render (){

@@ -4,6 +4,8 @@ import api from "../actions/api.js";
 import ButterToast, { Cinnamon } from "butter-toast";
 import { AssignmentTurnedIn } from "@material-ui/icons";
 
+/* define variables for payment */
+
 const initialState = {
     name: "",
     card: "",
@@ -30,6 +32,8 @@ class Payment extends React.Component {
                 : e.target.value
         });
     }
+
+/* Handle Payment methods */
 
     handleSubmit = e => {
         e.preventDefault();
@@ -64,7 +68,7 @@ class Payment extends React.Component {
         })
     }
 
-/*****validate payment form  input fields**********/
+/* validate payment form  input fields */
 
     validate = () => {
         let nameError= "";
@@ -109,7 +113,7 @@ class Payment extends React.Component {
         return true;
     }
 
-/*****Payment form**********/
+/* Payment form */
 
     render (){
         return (
