@@ -3,8 +3,9 @@ import '../App.css';
 import api from "../actions/api.js";
 import ButterToast, { Cinnamon } from "butter-toast";
 import { AssignmentTurnedIn , ExtensionSharp } from "@material-ui/icons";
+import axios from 'axios';
 
-//define variables.
+//define variables
 const initialState = {
     id: "",
     name: "",
@@ -20,6 +21,8 @@ const initialState = {
     confirmButton: "ADD",
     categories: [],
     products: [],
+    selectedFile: "",
+    image:""
 }
 
 class Product extends React.Component {
@@ -52,8 +55,7 @@ class Product extends React.Component {
         fetch(url).then(response => response.json())
         .then(json => {
             const pro = json.filter(pro => pro._id===id)
-            this.setState({name: pro[0]['name'],category: pro[0]['category'],price: pro[0]['price'],quantity: pro[0]['quantity'],discount: pro[0]['discount'],id: pro[0]['_id']})
-            console.log(this.state.id)
+            this.setState({name: pro[0]['name'],category: pro[0]['category'],price: pro[0]['price'],quantity: pro[0]['quantity'],discount: pro[0]['discount'],id: pro[0]['_id'],image: pro[0]['image']})
         })
         this.setState({confirmButton:"EDIT"});
     }
@@ -62,11 +64,11 @@ class Product extends React.Component {
         this.setState(initialState);
         this.componentDidMount();
     }
-	
-	//for delete product details
+
+    //for delete products
     onDelete(id){
         if (window.confirm("Are you sure to delete this record?")) {
-            api.category().delete(id)
+            api.product().delete(id)
             .then(res =>{
                 ButterToast.raise({
                     content: <Cinnamon.Crisp title="Online Store"
@@ -79,9 +81,9 @@ class Product extends React.Component {
             });
         }
     }
-	
-	//for upload a product image
-	onChangeHandler=event=>{
+
+    //for upload a product image
+    onChangeHandler=event=>{
         this.setState({
             selectedFile: event.target.files[0],
             loaded: 0,
@@ -95,7 +97,7 @@ class Product extends React.Component {
         })
     }
 
-	//handle form submit button
+    //function for handle submit button in form
     handleSubmit = e => {
         e.preventDefault();
         const isValid = this.validate();
@@ -104,7 +106,20 @@ class Product extends React.Component {
             api.product().fetchAll().then(res => {
                 const pro = res.data.filter( product => (product.name===this.state.name&&product.category===this.state.category));
                 if(pro.length>0||this.state.id!==""){
-                    if((this.state.id!==""&&pro[0].name===this.state.name&&this.state.category===pro[0].category)||pro.length===0){
+                    if(pro.length===0){
+                        api.product().update(this.state.id,this.state)
+                        .then(res => {
+                            ButterToast.raise({
+                                content: <Cinnamon.Crisp title="Online Store"
+                                    content="Product Edit successfully"
+                                    scheme={Cinnamon.Crisp.SCHEME_PURPLE}
+                                    icon={<AssignmentTurnedIn />}
+                                />
+                            })
+                            this.setState(initialState)
+                            this.componentDidMount()
+                        } );
+                    }else if((this.state.id!==""&&pro[0].name===this.state.name&&this.state.category===pro[0].category)||pro.length===0){
                         api.product().update(this.state.id,this.state)
                         .then(res => {
                             ButterToast.raise({
@@ -144,16 +159,21 @@ class Product extends React.Component {
         }
     }
 
-    /*****validate an input fields**********/
+    //validate form input fields
     validate = () => {
         let nameError = "";
         let priceError = "";
         let discountError = "";
         let categoryError = "";
         let quantityError = "";
+        let imageError = "";
 
         if(!this.state.name){
             nameError="Product Name Cannot Be Blank"
+        }
+
+        if(!this.state.image){
+            imageError="Image Required!"
         }
 
         if(!this.state.price){
@@ -178,11 +198,11 @@ class Product extends React.Component {
             quantityError = "Use only digits!";
         }
 
-        if(nameError||quantityError||categoryError||discountError||priceError){
-            this.setState({ nameError ,quantityError ,categoryError,discountError,priceError});
+        if(nameError||quantityError||categoryError||discountError||priceError||imageError){
+            this.setState({ nameError ,quantityError ,categoryError,discountError,priceError,imageError});
             return false;
         }else{
-            this.setState({ nameError ,quantityError ,categoryError,discountError,priceError});
+            this.setState({ nameError ,quantityError ,categoryError,discountError,priceError,imageError});
         }
 
         return true;
@@ -197,9 +217,10 @@ class Product extends React.Component {
                     <div class="row justify-content-center">
                         <div class="col-md-10">
                             <div class="card">
-                                <div class="card-header">Category</div>
+                                <div class="card-header">Product</div>
                                 <div class="card-body">
-								//form for add new product details
+
+                                    /*********form for add product details**********/
                                     <form autoComplete="off" onSubmit={this.handleSubmit}>
                                         <div class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-right">Product Name</label>
@@ -239,12 +260,20 @@ class Product extends React.Component {
                                                 <div style={{color : "red"}}>{this.state.priceError}</div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-right">Discount</label>
                                             <div class="col-md-6">
                                                 <input type="text" class="form-control" name="discount" value={this.state.discount} onChange={this.handleChange} />
                                                 <div style={{color : "red"}}>{this.state.discountError}</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label class="col-md-4 col-form-label text-md-right">Image</label>
+                                            <div class="col-md-6">
+                                                <input type="file" class="form-control" name="file" onChange={this.onChangeHandler}/>
+                                                <div style={{color : "red"}}>{this.state.imageError}</div>
                                             </div>
                                         </div>
                                                 
@@ -254,9 +283,9 @@ class Product extends React.Component {
                                         </div>
                                     </form>
                                     <br></br>
-									
-									//table for display added product details
                                     <div class="x_scroll">
+
+                                        /**********table for display product details****************/
                                         <table class="table">
                                             <thead>
                                                 <tr>
@@ -265,6 +294,7 @@ class Product extends React.Component {
                                                     <th class="tableTh">Quantity</th>
                                                     <th class="tableTh">Price</th>
                                                     <th class="tableTh">Discount</th>
+                                                    <th class="tableTh">Image</th>
                                                     <th class="tableTh">Edit</th>
                                                     <th class="tableTh">Remove</th>
                                                 </tr>
@@ -280,6 +310,7 @@ class Product extends React.Component {
                                                     <td class="tableTh">{ product.quantity }</td>
                                                     <td class="tableTh">{ product.price }</td>
                                                     <td class="tableTh">{ product.discount }</td>
+                                                    <td class="tableTh"><img width="100px" alt="" src={ "http://localhost:4000/"+product.image } class="img-thumbnail"/></td>
                                                     <td class="tableTh"><button type='button' onClick={() => this.onChange(product._id)} class='btn btn-success'>Edit</button></td>
                                                     <td class="tableTh"><button type='button' onClick={() => this.onDelete(product._id)} class='btn btn-danger'>Delete</button></td>
                                                 </tr>
