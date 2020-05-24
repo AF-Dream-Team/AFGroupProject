@@ -12,7 +12,7 @@ const initialState = {
     confirmButton: "Send",
     commentError: "",
     commentId: "",
-	wishlist:[],
+    wishlist:[],
     wishError:"",
     wish_list:"",
     proId: "",
@@ -56,22 +56,48 @@ class oneProduct extends React.Component {
         const purl = "http://localhost:4000/product";
         fetch(purl).then(response => response.json())
         .then(json => {const pro = json.filter(pro => pro._id===localStorage.getItem('itemId'))
-            this.setState({products: pro})
+            this.setState({products: pro,proId:pro[0]['_id'],proName:pro[0]['name'],proPrice:pro[0]['price'],proDiscount:pro[0]['discount'],proQuantity:pro[0]['quantity'],proImage:pro[0]['image']})
         })
-		
         const url = "http://localhost:4000/message";
         fetch(url).then(response => response.json())
         .then(json => {const msg = json.filter(msg => msg.product===localStorage.getItem('itemId'))
             this.setState({messages: msg})
         })
-		const wurl = "http://localhost:4000/wishlist";
+        const wurl = "http://localhost:4000/wishlist";
         fetch(wurl).then(response => response.json())
         .then(json => {const wish = json.filter(wish => wish.email===localStorage.getItem('userEmail'))
             this.setState({wishlist: wish})
         })
     }
-// adding an item to the wishlist
-	    onWish(){
+
+    onCart(){
+        if(this.state.quantity){
+            if(this.state.quantity<=this.state.proQuantity){
+                const total=this.state.quantity*this.state.proPrice-(this.state.proDiscount*this.state.quantity)
+                this.setState({ type:'cart' ,total:total , wish_list: '', email: localStorage.getItem('userEmail') }, () => { 
+                    api.myItem().create(this.state)
+                    .then(res =>{
+                        ButterToast.raise({
+                            content: <Cinnamon.Crisp title="Online Store"
+                                content="Product Add Successful!"
+                                scheme={Cinnamon.Crisp.SCHEME_PURPLE}
+                                icon={<AssignmentTurnedIn />}
+                            />
+                        })
+                        this.componentDidMount()
+                        this.setState(initialState)
+                    })
+                })
+            }else{
+                this.setState({quantityError:"Quantity Error!"})
+            }
+        }else{
+            this.setState({quantityError:"Quantity Required!"})
+        }
+    }
+
+    // adding an item to the wishlist
+    onWish(){
         if(this.state.wish_list){
             if(this.state.quantity){
                 if(this.state.quantity<=this.state.proQuantity){
@@ -101,9 +127,8 @@ class oneProduct extends React.Component {
             this.setState({wishError:"Plaese select"})
         }
     }
-	
-	
-	    editButton(id,msg,email){
+
+    editButton(id,msg,email){
         if(localStorage.getItem('userEmail')){
             if(email===localStorage.getItem('userEmail')){
                 return  [<button type='button' onClick={() => this.onChange(id,msg)} class='btn btn-success'>EDIT</button>,
@@ -112,7 +137,7 @@ class oneProduct extends React.Component {
         }
     }
 
-	// deleting a comment given for a product
+    // deleting a comment given for a product
     onDelete(id){
         if (window.confirm("Are you sure to delete comment?")) {
             api.message().delete(id)
@@ -129,7 +154,7 @@ class oneProduct extends React.Component {
         }
     }
 
-	// adding a comment for a product
+    // adding a comment for a product
     handleSubmit = e => {
         e.preventDefault();
         const isValid = this.validate();
@@ -176,67 +201,8 @@ class oneProduct extends React.Component {
         }
     }
 
-
-    onBuy(id){
-        localStorage.setItem("itemId",id);
-        window.location.href = '/product';
-    }
-
-    editButton(id,msg,email){
-        if(localStorage.getItem('userEmail')){
-            if(email===localStorage.getItem('userEmail')){
-                return  <button type='button' onClick={() => this.onChange(id,msg)} class='btn btn-success'>EDIT</button>;
-            }
-        }
-    }
-
-	// updating a comment given for a product
-    handleSubmit = e => {
-        e.preventDefault();
-        const isValid = this.validate();
-        if(isValid){
-            if(localStorage.getItem('userEmail')){
-                const data ={ message:this.state.comment,name:localStorage.getItem('userName'),email:localStorage.getItem('userEmail'),product:localStorage.getItem('itemId') }
-                if(this.state.commentId){
-                    api.message().update(this.state.commentId,{message:this.state.comment})
-                    .then(res =>{
-                        ButterToast.raise({
-                            content: <Cinnamon.Crisp title="Online Store"
-                                content="Change Successful!"
-                                scheme={Cinnamon.Crisp.SCHEME_PURPLE}
-                                icon={<AssignmentTurnedIn />}
-                            />
-                        })
-                        this.componentDidMount()
-                    })
-                }else{
-                    api.message().create(data)
-                    .then(res => {
-                        ButterToast.raise({
-                            content: <Cinnamon.Crisp title="Online Store"
-                                content="Product Add successfully"
-                                scheme={Cinnamon.Crisp.SCHEME_PURPLE}
-                                icon={<AssignmentTurnedIn />}
-                            />
-                        })
-                    } );
-                }
-                this.setState(initialState)
-                this.componentDidMount()
-            }else{
-                ButterToast.raise({
-                    content: <Cinnamon.Crisp title="Online Store"
-                        content="Please Login to the system!"
-                        scheme={Cinnamon.Crisp.SCHEME_PURPLE}
-                        icon={<ExtensionSharp />}
-                    />
-                });
-            }
-        }
-    }
-
-	//validating a comment before adding it
-     validate = () => {
+    //validating a comment before adding it
+    validate = () => {
         let commentError = "";
 
         if(!this.state.comment){
@@ -253,10 +219,9 @@ class oneProduct extends React.Component {
         return true;
     }
 
-//Add to cart form 
-
+    //Add to cart form
     render (){
-         const { products , messages , wishlist } = this.state;
+        const { products , messages , wishlist } = this.state;
         return (
             <div class="container">
             <br></br><br></br>

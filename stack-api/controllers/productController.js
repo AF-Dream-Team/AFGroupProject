@@ -1,11 +1,12 @@
 const express = require('express')
 var router = express.Router()
 var ObjectID= require('mongoose').Types.ObjectId
-
+var multer = require('multer')
+var uniqid = require('uniqid')
 
 var { NewProduct } = require('../models/newProducts')
 
-/*******APIs for manage products***************/
+/*******APIs for manage products*********/
 
 //API for get product details
 router.get('/',(req,res)=>{
@@ -23,17 +24,17 @@ router.post('/',(req,res)=>{
     var newRecord= new NewProduct({
         name : req.body.name,
         category : req.body.category,
-        decription : req.body.decription,
         quantity : req.body.quantity,
         price : req.body.price,
-        discount : req.body.discount
+        discount : req.body.discount,
+        image : req.body.image
     })
 
     newRecord.save((err,docs)=>{
         if(!err){
             res.send(docs)
         }else{
-            console.log('Error while adding product : '+JSON.stringify(err,undefined,2))
+            console.log('Error while register : '+JSON.stringify(err,undefined,2))
         }
     })
 })
@@ -47,10 +48,10 @@ router.put('/:id',(req,res)=>{
     var updateRecords={
         name : req.body.name,
         category : req.body.category,
-        decription : req.body.decription,
         quantity : req.body.quantity,
         price : req.body.price,
-        discount : req.body.discount
+        discount : req.body.discount,
+        image : req.body.image
     }
 
     NewProduct.findByIdAndUpdate(req.params.id, { $set: updateRecords},{new:true}, (err,docs)=>{
@@ -75,6 +76,15 @@ router.delete('/:id',(req,res)=>{
             console.log('Error while updating records : '+JSON.stringify(err,undefined,2))
         }
     })
+})
+
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+    cb(null, 'public')
+  },
+  filename: function (req, file, cb) {
+    cb(null, uniqid() + '-' +file.originalname )
+  }
 })
 
 //for upload image

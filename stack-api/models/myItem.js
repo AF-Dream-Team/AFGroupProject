@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+//modal for ordered item
 var myItem = mongoose.model('myItem',{
     type: {type:String},
     email: {type:String},

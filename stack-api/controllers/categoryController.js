@@ -2,8 +2,9 @@ const express = require('express')
 var router = express.Router()
 var ObjectID= require('mongoose').Types.ObjectId
 
-/************APIs for manage categories*********/
 var { ProductCategory } = require('../models/productCategory')
+
+/************APIs for manage categories*********/
 
 //API for get all categories
 router.get('/',(req,res)=>{

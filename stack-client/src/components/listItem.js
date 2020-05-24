@@ -4,7 +4,6 @@ import api from "../actions/api.js";
 import ButterToast, { Cinnamon } from "butter-toast";
 import { AssignmentTurnedIn } from "@material-ui/icons";
 
-//define variables
 const initialState = {
     lists: []
 }
@@ -26,7 +25,6 @@ class myList extends React.Component {
         })
     }
 
-	// move wishlist item to the shopping cart
     onMove(id){
         api.myItem().update(id,{type: 'cart' })
         .then(res =>{
@@ -41,7 +39,6 @@ class myList extends React.Component {
         })
     }
     
-	//delete an item in the wishlist
     onDelete(id){
         if (window.confirm("Are you sure to delete this record?")) {
             api.myItem().delete(id)

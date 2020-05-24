@@ -24,7 +24,8 @@ class Login extends React.Component {
                 : e.target.value
         });
     }
-/*---------------validating the login edtails-------------------------*/
+
+
     handleSubmit = e => {
         e.preventDefault();
         const isValid = this.validate();
@@ -68,6 +69,7 @@ class Login extends React.Component {
         }
     }
 
+    /*---------------validating the login edtails-------------------------*/
     validate = () => {
         let emailError = "";
         let passwordError = "";

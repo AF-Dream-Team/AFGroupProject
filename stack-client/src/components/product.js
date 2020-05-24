@@ -50,6 +50,7 @@ class Product extends React.Component {
         });
     }
 
+    //update product details
     onChange(id){
         const url = "http://localhost:4000/product/";
         fetch(url).then(response => response.json())
@@ -60,6 +61,7 @@ class Product extends React.Component {
         this.setState({confirmButton:"EDIT"});
     }
 
+    //to clear input fields
     onClear(){
         this.setState(initialState);
         this.componentDidMount();
@@ -220,7 +222,7 @@ class Product extends React.Component {
                                 <div class="card-header">Product</div>
                                 <div class="card-body">
 
-                                    /*********form for add product details**********/
+                                    {/*form for add product details*/}
                                     <form autoComplete="off" onSubmit={this.handleSubmit}>
                                         <div class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-right">Product Name</label>
@@ -285,7 +287,7 @@ class Product extends React.Component {
                                     <br></br>
                                     <div class="x_scroll">
 
-                                        /**********table for display product details****************/
+                                        {/*table for display product details*/}
                                         <table class="table">
                                             <thead>
                                                 <tr>

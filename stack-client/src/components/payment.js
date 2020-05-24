@@ -5,7 +5,6 @@ import ButterToast, { Cinnamon } from "butter-toast";
 import { AssignmentTurnedIn } from "@material-ui/icons";
 
 /* define variables for payment */
-
 const initialState = {
     name: "",
     card: "",
@@ -33,8 +32,7 @@ class Payment extends React.Component {
         });
     }
 
-/* Handle Payment methods */
-
+    /* Handle Payment methods */
     handleSubmit = e => {
         e.preventDefault();
         const isValid = this.validate();
@@ -68,8 +66,7 @@ class Payment extends React.Component {
         })
     }
 
-/* validate payment form  input fields */
-
+    /* validate payment form  input fields */
     validate = () => {
         let nameError= "";
         let cardError= "";
@@ -113,7 +110,7 @@ class Payment extends React.Component {
         return true;
     }
 
-/* Payment form */
+    /* Payment form */
 
     render (){
         return (

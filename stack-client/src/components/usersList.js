@@ -18,7 +18,8 @@ class Users extends React.Component {
         fetch(url).then(response => response.json())
         .then(json => this.setState({users: json.filter(user => user.email!==localStorage.getItem('userEmail'))}))
     }
-/* --------------deleting a record in this list----------------- */
+
+    /* --------------deleting a record in this list----------------- */
     onDelete(id){
         if (window.confirm("Are you sure to delete this record?")) {
             api.registerUser().delete(id)
@@ -34,7 +35,8 @@ class Users extends React.Component {
             });
         }
     }
-/*-----------------changing the priviledges-----------------------*/
+
+    /*-----------------changing the priviledges-----------------------*/
     onUserChange(id,type){
         if (window.confirm("Are you sure to change the privilege?")) {
             var data = { type:type}

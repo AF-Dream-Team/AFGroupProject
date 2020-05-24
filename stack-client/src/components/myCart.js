@@ -46,7 +46,7 @@ class myCart extends React.Component {
         }
     }
 
-/*****Cart form **********/
+    /*****Cart form **********/
 
     render (){
         const { myCart } = this.state;

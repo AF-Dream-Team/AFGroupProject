@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e67fcda0-a10e-4a56-ab90-2c69adda89ec" name="Default Changelist" comment="">
+    <list default="true" id="b47e8354-54b2-4111-a9de-966b22aaad0d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/controllers/categoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/categoryController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/messageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/messageController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/myItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/myItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/registerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/wishlistController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/wishlistController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/myItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/myItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/newProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/newProducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/productCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/productCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/registerUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/registerUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/wishlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/wishlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack-client/src/components/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stack-client/src/components/category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack-client/src/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stack-client/src/components/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack-client/src/components/myCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stack-client/src/components/myCart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../stack-client/src/components/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stack-client/src/components/nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack-client/src/components/oneProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stack-client/src/components/oneProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack-client/src/components/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stack-client/src/components/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack-client/src/components/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stack-client/src/components/payment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../stack-client/src/components/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stack-client/src/components/product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../stack-client/src/components/productList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stack-client/src/components/productList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack-client/src/components/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stack-client/src/components/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack-client/src/components/usersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stack-client/src/components/usersList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack-client/src/components/wishList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stack-client/src/components/wishList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1bwvp5NsqenZEd3XiPrzOrPCTWQ" />
+  <component name="ProjectId" id="1cJqxziki6DUtYzTOeJE82QUmbw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,23 +47,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../stack-client" />
-    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e67fcda0-a10e-4a56-ab90-2c69adda89ec" name="Default Changelist" comment="" />
-      <created>1589556149943</created>
+      <changelist id="b47e8354-54b2-4111-a9de-966b22aaad0d" name="Default Changelist" comment="" />
+      <created>1590257294560</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1589556149943</updated>
-      <workItem from="1589556152056" duration="497000" />
-      <workItem from="1589834463145" duration="151000" />
-      <workItem from="1589999995202" duration="28000" />
-      <workItem from="1590039776341" duration="358000" />
-      <workItem from="1590057792013" duration="1317000" />
+      <updated>1590257294560</updated>
+      <workItem from="1590257296846" duration="4873000" />
+      <workItem from="1590294476518" duration="5578000" />
     </task>
     <servers />
   </component>
@@ -56,29 +67,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590058518641">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590294605216">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590058518641" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1590040140319">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589834622068" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590040140319" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1590040140318">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589834622068" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590040140318" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1590040140317">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589834622068" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590040140317" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1590040140318">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589834622068" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590040140318" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590294605216" />
   </component>
 </project>

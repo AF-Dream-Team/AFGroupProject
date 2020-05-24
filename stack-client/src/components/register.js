@@ -32,7 +32,7 @@ class Register extends React.Component {
                 : e.target.value
         });
     }
-/*---------------validating the user details----------------*/
+
     handleSubmit = e => {
         e.preventDefault();
         const isValid = this.validate();
@@ -66,6 +66,7 @@ class Register extends React.Component {
         }
     }
 
+    /*---------------validating the user details----------------*/
     validate = () => {
         let fnameError = "";
         let lnameError = "";

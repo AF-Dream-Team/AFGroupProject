@@ -1,6 +1,3 @@
-
-
-
 const express = require('express');
 var router = express.Router()
 var ObjectID= require('mongoose').Types.ObjectId
@@ -10,7 +7,7 @@ const nodemailer = require("nodemailer");
 /*---------------Api for registering the user -----------------*/
 var { RegisterUser } = require('../models/registerUser')
 
-/*-------------------Api error--------------------*/
+/*----retrieve users -----------------*/
 router.get('/',(req,res)=>{
     RegisterUser.find((err,docs)=>{
         if(!err){
@@ -21,6 +18,7 @@ router.get('/',(req,res)=>{
     })
 })
 
+/******Create users*******/
 router.post('/',(req,res)=>{
 
     var newRecord= new RegisterUser({
@@ -40,19 +38,20 @@ router.post('/',(req,res)=>{
         }
     })
 })
+
 /*------------------setting the email of the person who is capable of providing this service-----------------*/
 router.post('/email',(req,res)=>{
 
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'dsassignment2dreamteam2020@gmail.com',
-          pass: 'ds2020@#'
+          user: 'apptest1994.05@gmail.com',
+          pass: 'apps1234'
         }
       });
 
     var mailOption ={
-        from: 'dsassignment2dreamteam2020@gmail.com',
+        from: 'apptest1994.05@gmail.com',
         to: req.body.email,
         subject: "Online Store change the privilege",
         text: "change your privilege to store manager"
@@ -68,6 +67,7 @@ router.post('/email',(req,res)=>{
       });
     
 })
+
 
 router.put('/:id',(req,res)=>{
     if(!ObjectID.isValid(req.params.id)){

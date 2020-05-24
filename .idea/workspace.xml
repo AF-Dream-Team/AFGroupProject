@@ -1,96 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="eec9f32d-95e9-484a-b263-edb65059efa0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a547734d-9836-4d54-81b8-0a989b89cb49" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/stack-api/controllers/categoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/categoryController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/controllers/messageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/messageController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/controllers/myItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/myItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/controllers/registerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/registerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/controllers/wishlistController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/wishlistController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/models/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/models/myItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/myItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/models/newProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/newProducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/models/productCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/productCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/models/registerUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/registerUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/models/wishlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/wishlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/myCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/myCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/oneProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/oneProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/payment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/productList.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/productList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/usersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/usersList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/components/wishList.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/wishList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1cBRAbjd7Vh4jiiVnhfWBFzHDAo" />
+  <component name="ProjectId" id="1cLTsbOpWVToyPb0wLRFSLgtR64" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Madhuransi\Desktop\AFgroupProject\AFGroupProject\stack-client\src\components" />
-      <recent name="C:\Users\Madhuransi\Desktop\AFgroupproject\AFGroupProject\stack-api\models" />
-      <recent name="C:\Users\Madhuransi\Desktop\AFgroupproject\AFGroupProject\stack-api\controllers" />
-    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eec9f32d-95e9-484a-b263-edb65059efa0" name="Default Changelist" comment="" />
-      <created>1589999857666</created>
+      <changelist id="a547734d-9836-4d54-81b8-0a989b89cb49" name="Default Changelist" comment="" />
+      <created>1590307081840</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1589999857666</updated>
-      <workItem from="1589999858863" duration="106000" />
-      <workItem from="1590059728588" duration="304000" />
-      <workItem from="1590136497460" duration="631000" />
-      <workItem from="1590218496978" duration="71000" />
-      <workItem from="1590219552249" duration="54000" />
-      <workItem from="1590281539087" duration="603000" />
-      <workItem from="1590295258136" duration="83000" />
+      <updated>1590307081840</updated>
+      <workItem from="1590307085703" duration="242000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
