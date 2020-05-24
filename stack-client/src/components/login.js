@@ -5,6 +5,7 @@ import api from "../actions/api.js";
 import ButterToast, { Cinnamon } from "butter-toast";
 import { AssignmentTurnedIn , ExtensionSharp } from "@material-ui/icons";
 
+//defines variables
 const initialState = {
     email: "",
     password: "",

@@ -8,6 +8,7 @@ const initialState = {
     lists: []
 }
 
+
 class myList extends React.Component {
 
     constructor(props) {
