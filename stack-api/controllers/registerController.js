@@ -7,9 +7,10 @@ var ObjectID= require('mongoose').Types.ObjectId
 var nodeBase64 = require('nodejs-base64-converter');
 const nodemailer = require("nodemailer");
 
-/*---------------Api error -----------------*/
+/*---------------Api for registering the user -----------------*/
 var { RegisterUser } = require('../models/registerUser')
 
+/*-------------------Api error--------------------*/
 router.get('/',(req,res)=>{
     RegisterUser.find((err,docs)=>{
         if(!err){

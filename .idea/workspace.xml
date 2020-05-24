@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eec9f32d-95e9-484a-b263-edb65059efa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/stack-client/src/components/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-api/controllers/registerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/registerController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +66,7 @@
       <workItem from="1590136497460" duration="631000" />
       <workItem from="1590218496978" duration="71000" />
       <workItem from="1590219552249" duration="54000" />
+      <workItem from="1590281539087" duration="603000" />
     </task>
     <servers />
   </component>
