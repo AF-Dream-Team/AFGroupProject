@@ -8,23 +8,23 @@ User Guide
 
 ## Development Team:
 
-IT18139686 - Madhuransi Kawshala A.G.
-IT18195958 - Naotunna S.U.
-IT18017748 - Ranruwini M.A.T.I.
-IT18122824 - Rubasinghe T.H.
+- IT18139686 - Madhuransi Kawshala A.G.
+- IT18195958 - Naotunna S.U.
+- IT18017748 - Ranruwini M.A.T.I.
+- IT18122824 - Rubasinghe T.H.
 
 ## Prerequisites before installation and setup
 
-Node Js with npm
-Git 
-WebStorm 2019.3.3 x64 or Visual Studio Code
+- Node Js with npm
+- Git 
+- WebStorm 2019.3.3 x64 or Visual Studio Code
 
 
 ## Technologies
 
-HTML/JavaScript, ReactJS ( Frontend )
-ExpressJS, Node Js, API running JSON based web services ( Backend )
-MongoDB  Database (Atlas)
+- HTML/JavaScript, ReactJS ( Frontend )
+- ExpressJS, Node Js, API running JSON based web services ( Backend )
+- MongoDB  Database (Atlas)
 
 
 ## Project Installation - Steps to install app in the client environment
