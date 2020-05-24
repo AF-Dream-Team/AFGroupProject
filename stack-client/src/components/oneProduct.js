@@ -71,28 +71,38 @@ class oneProduct extends React.Component {
     }
 
     onCart(){
-        if(this.state.quantity){
-            if(this.state.quantity<=this.state.proQuantity){
-                const total=this.state.quantity*this.state.proPrice-(this.state.proDiscount*this.state.quantity)
-                this.setState({ type:'cart' ,total:total , wish_list: '', email: localStorage.getItem('userEmail') }, () => { 
-                    api.myItem().create(this.state)
-                    .then(res =>{
-                        ButterToast.raise({
-                            content: <Cinnamon.Crisp title="Online Store"
-                                content="Product Add Successful!"
-                                scheme={Cinnamon.Crisp.SCHEME_PURPLE}
-                                icon={<AssignmentTurnedIn />}
-                            />
-                        })
-                        this.componentDidMount()
-                        this.setState(initialState)
+        if(localStorage.getItem('userEmail')){
+            if(this.state.quantity){
+                if(this.state.quantity<=this.state.proQuantity){
+                    const total=this.state.quantity*this.state.proPrice-(this.state.proDiscount*this.state.quantity)
+                    this.setState({ type:'cart' ,total:total , wish_list: '', email: localStorage.getItem('userEmail') }, () => {
+                        api.myItem().create(this.state)
+                            .then(res =>{
+                                ButterToast.raise({
+                                    content: <Cinnamon.Crisp title="Online Store"
+                                                             content="Product Add Successful!"
+                                                             scheme={Cinnamon.Crisp.SCHEME_PURPLE}
+                                                             icon={<AssignmentTurnedIn />}
+                                    />
+                                })
+                                this.componentDidMount()
+                                this.setState(initialState)
+                            })
                     })
-                })
+                }else{
+                    this.setState({quantityError:"Quantity Error!"})
+                }
             }else{
-                this.setState({quantityError:"Quantity Error!"})
+                this.setState({quantityError:"Quantity Required!"})
             }
         }else{
-            this.setState({quantityError:"Quantity Required!"})
+            ButterToast.raise({
+                content: <Cinnamon.Crisp title="Online Store"
+                                         content="Please Login to the system!"
+                                         scheme={Cinnamon.Crisp.SCHEME_PURPLE}
+                                         icon={<ExtensionSharp />}
+                />
+            });
         }
     }
 

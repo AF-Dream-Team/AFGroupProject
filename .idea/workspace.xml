@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a547734d-9836-4d54-81b8-0a989b89cb49" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/stack-api/controllers/categoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/categoryController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-api/controllers/messageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/messageController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-api/controllers/myItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/myItemController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-api/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/productController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-api/controllers/registerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/registerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-api/controllers/wishlistController.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/controllers/wishlistController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-api/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-api/models/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-api/models/myItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/myItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-api/models/newProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/newProducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-api/models/productCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/productCategory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-api/models/registerUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/registerUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-api/models/wishlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-api/models/wishlist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-client/src/components/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-client/src/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-client/src/components/myCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/myCart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-client/src/components/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack-client/src/actions/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/actions/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stack-client/src/components/oneProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/oneProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-client/src/components/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-client/src/components/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/payment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-client/src/components/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-client/src/components/productList.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/productList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-client/src/components/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-client/src/components/usersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/usersList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-client/src/components/wishList.js" beforeDir="false" afterPath="$PROJECT_DIR$/stack-client/src/components/wishList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cLTsbOpWVToyPb0wLRFSLgtR64" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -59,6 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590307081840</updated>
       <workItem from="1590307085703" duration="242000" />
+      <workItem from="1590311011679" duration="163000" />
     </task>
     <servers />
   </component>
